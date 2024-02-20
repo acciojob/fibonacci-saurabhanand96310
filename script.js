@@ -1,14 +1,13 @@
 function fibonacci(n) {
 // your code here
-	let a=0;
-	let b=1;
-	let c=a+b;
-	for(let i=2;i<=n;i++){
-		a=b;
-		b=c;
-		c=a+b;
-	}
-	return c;
+	 let a = 0, b = 1;
+    if (n === 0) return a;
+    for (let i = 2; i <= n; i++) {
+        let temp = b;
+        b = a + b;
+        a = temp;
+    }
+    return b;
 	
 }
 
